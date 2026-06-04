@@ -26,6 +26,6 @@ The UI breaks down the normalization process exactly how a database engineer wou
 Built with **Streamlit**, the application features a custom-styled, clean UI. It abstracts the heavy mathematical lifting behind the scenes and presents the user with readable schema grids, clearly defining Primary Keys (PK) and inferred Foreign Keys (FK) for the final database design.
 
 *some of the image*
-![image simulation](/images/dbms1.png)
-![image simulation](/images/dbms2.png)
-![image simulation](/images/dbms3.png)
+![image simulation](https://princyspatel.github.io/images/dbms1.png)
+![image simulation](https://princyspatel.github.io/images/dbms2.png)
+![image simulation](https://princyspatel.github.io/images/dbms3.png)
