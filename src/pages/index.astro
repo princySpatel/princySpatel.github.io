@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import ProjectSnippet from "../components/ProjectSnippet.astro";
+import ArticleSnippet from "../components/ArticleSnippet.astro";
+import { getConfigurationCollection } from "../lib/utils";
+
+const { data: config } = await getConfigurationCollection();
+
+const allProjects = await getCollection("project");
+const featuredProjects = allProjects
+  .sort((a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf())
+  .slice(0, 1);
+
+const allArt = await getCollection("blog");
+const featuredArt = allArt
+  .sort((a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf())
+  .slice(0, 1);
+---
+
+<Layout title={`${config.personal.name} - Portfolio`}>
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24 mt-16 zag-text">
+
+    <aside class="md:w-1/3 md:sticky md:top-12 h-fit">
+      <div class="flex flex-col items-start">
+        <h1 class="text-3xl font-bold tracking-widest mb-4 font-pixel">Hi, I'm Princy.</h1>
+        
+        <p class="text-sm font-mono font-medium leading-relaxed mb-8 zag-text">
+          I am a B.Tech CSE student specializing in Artificial Intelligence and Machine Learning. My work lives at the intersection of deep technical logic and creative exploration. From optimizing Data Structures and Algorithms to building Computer Vision pipelines and 3D technical art, I enjoy combining robust Software Engineering with the art of Data Science
+        </p>
+      </div>
+    </aside>
+
+    <main class="md:w-2/3 flex flex-col gap-16 font-mono">
+      
+      <section>
+        <div class="flex justify-between items-end zag-border-b pb-2 mb-8">
+          <h2 class="text-2xl font-bold tracking-wider font-pixel">Latest Projects</h2>
+          <a href="/projects" class="text-sm hover:underline zag-text-muted">View All</a>
+        </div>
+
+        <div>
+          {featuredProjects.map((project) => (
+            <ProjectSnippet
+              title={project.data.title}
+              description={project.data.description}
+              url={`/projects/${project.data.slug}`}
+              githubUrl={project.data.githubUrl}
+              liveUrl={project.data.liveDemoUrl}
+              tags={project.data.tags ?? []}
+              thumbnail={project.data.thumbnail} 
+            />
+          ))}
+          {featuredProjects.length === 0 && <p class="zag-text">No projects found.</p>}
+        </div>
+      </section>
+
+      <section>
+        <div class="flex justify-between items-end zag-border-b pb-2 mb-8">
+          <h2 class="text-2xl font-bold tracking-wider font-pixel">Playground</h2>
+          <a href="/blog" class="text-sm hover:underline zag-text-muted">View All</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {featuredArt.map((art) => (
+            <ArticleSnippet
+              title={art.data.title}
+              description={art.data.description}
+              url={`/blog/${art.data.slug}`}
+              // timestamp={art.data.timestamp}
+            />
+          ))}
+          {featuredArt.length === 0 && <p class="zag-text">No explorations found.</p>}
+        </div>
+      </section>
+
+    </main>
+  </div>
+</Layout>

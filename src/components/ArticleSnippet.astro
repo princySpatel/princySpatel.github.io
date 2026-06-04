@@ -1,0 +1,42 @@
+---
+import { processArticleDate } from "../lib/utils";
+import Anchor from "./common/Anchor.astro";
+
+export type Props = {
+	title: string;
+	description: string;
+	url: string;
+	duration?: string;
+	timestamp?: Date;
+    thumbnail?: string; 
+};
+
+const { title, description, url, duration, timestamp, thumbnail } = Astro.props;
+---
+
+<div class="relative zag-text zag-transition flex flex-col sm:flex-row gap-6 mb-8 hover-zag-dotted-grid p-4 rounded-lg items-start">
+  
+  {/* If an art piece has a thumbnail, render it on the left */}
+  {thumbnail && (
+    <img 
+      src={thumbnail} 
+      alt={`${title} artwork`} 
+      class="w-full sm:w-32 sm:h-32 object-cover border-2 border-neutral-600 grayscale hover:grayscale-0 zag-transition shrink-0" 
+    />
+  )}
+
+  <div class="flex-1 flex flex-col gap-3">
+    <Anchor url={url} class="text-xl font-bold">
+      {title}
+    </Anchor>
+    
+    <p class="leading-relaxed text-sm">
+      {description}
+    </p>
+    
+    <!-- <div class="hidden" class="zag-muted zag-transition flex gap-4 text-xs mt-2">
+      {timestamp ? <p>{processArticleDate(timestamp)}</p> : null}
+      {duration ? <p>{duration}</p> : null}
+    </div> -->
+  </div>
+</div>

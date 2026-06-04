@@ -1,0 +1,53 @@
+---
+import Anchor from "./common/Anchor.astro";
+
+export type Props = {
+	title: string;
+	description: string;
+	url: string;
+	githubUrl?: string;
+	liveUrl?: string;
+	tags: string[];
+    thumbnail?: string; 
+};
+
+const { title, description, url, githubUrl, liveUrl, tags, thumbnail } = Astro.props;
+---
+
+<div class="relative flex flex-col sm:flex-row gap-6 mb-8 hover-zag-dotted-grid p-4 rounded-lg zag-transition items-start">
+  
+  {/* If a thumbnail exists in the markdown file, render it */}
+  {thumbnail && (
+    <img 
+      src={thumbnail} 
+      alt={`${title} thumbnail`} 
+      class="w-full sm:w-32 sm:h-32 object-cover border-2 border-neutral-600 grayscale hover:grayscale-0 zag-transition shrink-0" 
+    />
+  )}
+
+  <div class="flex-1 flex flex-col gap-3">
+    <div class="flex flex-col gap-3 sm:flex-row sm:justify-between">
+      <Anchor url={url} class="text-xl font-bold">
+        {title}
+      </Anchor>
+      <div class="flex gap-2">
+        {githubUrl ? <Anchor url={githubUrl} class="text-base" external>GitHub</Anchor> : null}
+        {liveUrl ? <Anchor url={liveUrl} class="text-base" external>Live</Anchor> : null}
+      </div>
+    </div>
+    
+    <p class="zag-text zag-transition text-sm leading-relaxed">
+      {description}
+    </p>
+    
+    <div class="flex flex-row flex-wrap gap-2 mt-2">
+      {
+        tags.map((tag: string) => (
+          <span class="-zag-text -zag-bg zag-transition px-2 py-1 text-xs font-semibold">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</div>
