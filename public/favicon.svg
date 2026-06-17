@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 540 540" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M553.75,-14.97l-0.146,564.085l-599.591,-0.156l0.146,-564.084l599.591,0.155Z" style="fill:#f5f5f5;"/><rect x="55.333" y="122.703" width="429.334" height="91.624" style="fill:#171717;"/><rect x="55.333" y="325.673" width="429.334" height="91.624" style="fill:#171717;"/><path d="M443.954,132.483l40.713,82.081l-388.621,192.756l-40.713,-82.081l388.621,-192.756Z" style="fill:#171717;"/><path d="M234.034,0l37.284,83.695l-271.318,120.862l-37.283,-83.695l271.317,-120.862Z" style="fill:#f5f5f5;"/><path d="M530.873,335.443l37.283,83.695l-271.318,120.862l-37.283,-83.695l271.318,-120.862Z" style="fill:#f5f5f5;"/></svg>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1000.000000pt" height="1000.000000pt" viewBox="0 0 1000.000000 1000.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,1000.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M0 5000 l0 -5000 5000 0 5000 0 0 5000 0 5000 -5000 0 -5000 0 0
+-5000z m6400 2757 c571 -87 990 -274 1318 -591 256 -246 460 -621 531 -971 72
+-355 51 -726 -59 -1055 -165 -498 -525 -917 -985 -1148 -274 -138 -512 -199
+-817 -209 -347 -12 -636 51 -933 202 -130 66 -362 209 -446 276 -20 16 -40 29
+-43 29 -3 0 -6 -549 -6 -1220 l0 -1220 -1310 0 -1310 0 0 2965 0 2966 1973 -4
+c1811 -3 1981 -4 2087 -20z"/>
+<path d="M4960 5855 l0 -645 28 -6 c15 -3 43 -10 62 -15 48 -12 208 -11 272 2
+201 40 363 162 445 332 56 116 68 177 67 342 -1 130 -4 161 -26 232 -64 212
+-216 351 -423 388 -48 9 -149 14 -252 15 l-173 0 0 -645z"/>
+</g>
+</svg>
