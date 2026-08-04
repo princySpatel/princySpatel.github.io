@@ -1,11 +1,13 @@
 ---
 title: "SafeEats AI Dietary Guardian"
-description: "A mobile-first web application that uses Google Gemini 2.5 Flash Vision to instantly analyze food packaging for hidden non-vegetarian ingredients and allergens."
+description: "A mobile-first web application that uses Google Gemini 3.6 Flash Vision to instantly analyze food packaging for hidden non-vegetarian ingredients and allergens."
 timestamp: 2026-05-10
 tags: ["AI/ML", "Python", "FastAPI", "UX Design"]
 githubUrl: "https://github.com/princySpatel/SafeEats_Princy"
-
+liveUrl: "https://safeeats-princy.vercel.app/"
 ---
+
+**Live Demo:** [Try SafeEats Here](https://safeeats-princy.vercel.app/)
 
 ## Overview
 Developed as an open innovation project. It serves as an AI-powered dietary guardian designed to solve a massive real-world problem: deciphering complex, misleading food ingredient labels. 
@@ -14,9 +16,10 @@ By snapping a quick photo of a product, the application processes the image and 
 
 ## Technical Architecture
 To ensure the app is fast enough to be used in a grocery store aisle, I built a lightweight, decoupled architecture:
-* **The AI Engine:** Integrated **Google Gemini 2.5 Flash (Vision & Reasoning)** to accurately perform OCR on curved, blurry, or tiny packaging text, and parse the ingredients against strict dietary rules.
+* **The AI Engine:** Integrated **Google Gemini 3.6 Flash (Vision & Reasoning)** to accurately perform OCR on curved, blurry, or tiny packaging text, and parse the ingredients against strict dietary rules.
 * **The Backend:** Developed a high-performance REST API using **Python and FastAPI** to handle image uploads, prompt engineering, and secure communication with the Gemini API.
 * **The Frontend:** Built completely in vanilla HTML, CSS, and JavaScript. By avoiding heavy frontend frameworks, the app remains incredibly fast and responsive on mobile devices.
+* **Deployment:** Hosted securely on **Vercel**, utilizing custom routing rules (`vercel.json`) to seamlessly connect the static HTML frontend to the serverless Python backend environment.
 
 ## UX & Interface Design
 Because this tool is meant to be used on the go with one hand, I prioritized a mobile-first user experience.
@@ -26,6 +29,13 @@ Because this tool is meant to be used on the go with one hand, I prioritized a m
 
 ## The Impact
 For the 40% of people managing strict religious diets, ethical choices, or severe food allergies, manual label checking is slow and prone to human error. SafeEats bridges the gap between complex industrial food chemistry and everyday consumer safety.
+
+## Future Enhancements
+As this project continues to evolve, I am planning several key updates:
+* **UX & Accessibility Evolvement:** Developing high-fidelity wireframes and conducting further user research to improve interface accessibility, ensuring the app is highly usable for visually impaired individuals who struggle the most with reading physical packaging.
+* **Custom Allergen Profiles:** Expanding beyond the binary vegetarian toggle to allow users to set personalized profiles for specific allergens (e.g., nuts, dairy, gluten, soy).
+* **Barcode Integration:** Adding the ability to scan standard product barcodes to cross-reference ingredient lists directly from global food databases alongside the AI OCR analysis.
+* **Personalized Safe Lists:** Implementing a dashboard where users can save previously scanned items to build a reliable, quick-reference grocery list.
 
 ![image](/images/safeeat2.png)
 ![image](/images/safeeatimage1.png)
