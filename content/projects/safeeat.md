@@ -4,7 +4,7 @@ description: "A mobile-first web application that uses Google Gemini 3.6 Flash V
 timestamp: 2026-05-10
 tags: ["AI/ML", "Python", "FastAPI", "UX Design"]
 githubUrl: "https://github.com/princySpatel/SafeEats_Princy"
-liveUrl: "https://safeeats-princy.vercel.app/"
+liveDemoUrl: "https://safeeats-princy.vercel.app/"
 ---
 
 **Live Demo:** [Try SafeEats Here](https://safeeats-princy.vercel.app/)
