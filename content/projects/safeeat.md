@@ -7,8 +7,6 @@ githubUrl: "https://github.com/princySpatel/SafeEats_Princy"
 liveDemoUrl: "https://safeeats-princy.vercel.app/"
 ---
 
-**Live Demo:** [Try SafeEats Here](https://safeeats-princy.vercel.app/)
-
 ## Overview
 Developed as an open innovation project. It serves as an AI-powered dietary guardian designed to solve a massive real-world problem: deciphering complex, misleading food ingredient labels. 
 
