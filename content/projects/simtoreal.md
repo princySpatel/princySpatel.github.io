@@ -3,6 +3,7 @@ title: "Sim-to-Real: Synthetic Data Pipeline for CV"
 description: "An automated Blender pipeline that generates synthetic 3D training data for YOLO object detection — and a deep dive into diagnosing why synthetic-only accuracy doesn't transfer to the real world."
 timestamp: 2026-06-04
 tags: ["Python", "Computer Vision", "Machine Learning", "PyTorch", "Blender"]
+githubUrl: "https://github.com/princySpatel/sim_to_real_blender"
 ---
 
 *Status: Core sim-to-real gap closed — real-world accuracy went from 0 detections to 0.84 mAP50, using zero real training photos.*
@@ -36,9 +37,9 @@ Measured with a proper `mAP50` evaluation on real photos (not just eyeballing pr
 
 | Stage | Real-world mAP50 |
 |---|---|
-| Baseline pipeline | 0 detections |
-| + co-occurrence rendering + materials | 0.45 |
-| + background diversity | **0.84** |
-| Synthetic-domain ceiling | 0.99 |
+| **Baseline pipeline** | **0 detections** |
+| **+ co-occurrence rendering + materials** | **0.45** |
+| **+ background diversity** | **0.84** |
+| **Synthetic-domain ceiling** | **0.99** |
 
 *Full write-up, code, and every intermediate experiment: [github.com/princySpatel/sim_to_real_blender](https://github.com/princySpatel/sim_to_real_blender)*
